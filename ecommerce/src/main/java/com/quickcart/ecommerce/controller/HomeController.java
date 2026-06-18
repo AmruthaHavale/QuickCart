@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/home")
-public class HomeController
-{
+public class HomeController {
+
     @RequestMapping("/")
-    @ResponseBody
-    public String home()
-    {
-        return "<strong><center>Welcome to Quick Cart</center></strong>";
+    public String home() {
+        // This will render src/main/resources/templates/home.html
+        return "home";
     }
 }
+
