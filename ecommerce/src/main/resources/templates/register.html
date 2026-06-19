@@ -6,37 +6,37 @@
     <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-<p class="heading">Registration form for local users</p><hr>
+<p class="heading">Registration form for users</p><hr>
 <div class="form">
-<form th:action="@{/user/register}"  method="post">
+    <form th:action="@{/user/register}" th:object="${user}" method="post">
 
-    <div class="name">
-    <label for="name">Username: </label>
-    <input type="text" id="name" name="name">
-    <br>
-    </div>
+        <div class="name">
+            <label for="name">Username: </label>
+            <input type="text" id="name" th:field="*{name}">
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+        </div>
 
-    <div class="email">
-    <label for="email">E-Mail: </label>
-    <input type="email" id="email" name="email">
-    <br>
-    </div>
+        <div class="email">
+            <label for="email">E-Mail: </label>
+            <input type="email" id="email" th:field="*{email}">
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+        </div>
 
-    <div class="mobile">
-    <label for="mobile">Mobile Number: </label>
-    <input type="text" id="mobile" name="mobile">
-    <br>
-    </div>
+        <div class="mobile">
+            <label for="mobile">Mobile Number: </label>
+            <input type="text" id="mobile" th:field="*{mobile}">
+            <span th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}"></span>
+        </div>
 
-    <div class="password">
-    <label for="password">Password: </label>
-    <input type="password" id="password" name="password">
-    <br>
-    </div>
+        <div class="password">
+            <label for="password">Password: </label>
+            <input type="password" id="password" th:field="*{password}">
+            <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+        </div>
 
-    <button type="submit">Register</button>
+        <button type="submit">Register</button>
+    </form>
 
-</form>
 </div>
 </body>
 </html>

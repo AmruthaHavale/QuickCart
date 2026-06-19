@@ -1,16 +1,25 @@
 package com.quickcart.ecommerce.Model;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class User
 {
+    @NotNull(message = "User name is required.")
+    @Size(min = 2, max = 50, message = "User name must be within 2-50 characters")
     private String name;
+
+    @NotNull(message = "Password field is required")
+    @Size(min=5, max=15, message = "Password must be within 5-15 characters")
     private String password;
+
     private String email;
-    private long mobile;
+    private String mobile;
 
     public User()
     {}
 
-    public User(String name, String password, String email, long mobile) {
+    public User(String name, String password, String email, String mobile) {
         this.name = name;
         this.password = password;
         this.email = email;
@@ -41,11 +50,11 @@ public class User
         this.email = email;
     }
 
-    public long getMobile() {
+    public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(long mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 }

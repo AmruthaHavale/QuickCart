@@ -1,7 +1,10 @@
 package com.quickcart.ecommerce.controller;
 
 import com.quickcart.ecommerce.Model.User;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +17,7 @@ import java.util.List;
 public class UserController
 {
     private List<User> userList = new ArrayList<>(List.of(
-            new User("Anjali", "abcd","anjali@gmail.com",123456789)
+            new User("Anjali", "abcd","anjali@gmail.com","1234567890")
             ));
 
     @RequestMapping("/user")
@@ -30,17 +33,29 @@ public class UserController
     }
 
     @PostMapping("/user/register")
-    public String userregister(User user)
+    public String userregister(@Valid User user, BindingResult result)
     {
+        if(result.hasErrors())
+        {
+            return "register";
+        }
         userList.add(user);
-        return "redirect:/login";
+        return "redirect:/user/login";
     }
 
-    @RequestMapping("/login")
-    @ResponseBody
-    public String userLogin()
-    {
-        return "ADBS";
+    @GetMapping("/user/login")
+    public String userLogin(Model model) {
+        model.addAttribute("user", new User());
+        return "login";
     }
+
+    @PostMapping("/user/login")
+    public String userLogin(@Valid User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return "login";
+        }
+        return "redirect:/home";
+    }
+
 
 }
