@@ -7,26 +7,36 @@
 </head>
 <body>
 <p class="heading">Registration form for local users</p><hr>
-<form th:action="@{/user/register}" method="post">
+<div class="form">
+<form th:action="@{/user/register}"  method="post">
 
+    <div class="name">
     <label for="name">Username: </label>
     <input type="text" id="name" name="name">
     <br>
+    </div>
 
+    <div class="email">
     <label for="email">E-Mail: </label>
     <input type="email" id="email" name="email">
     <br>
+    </div>
 
+    <div class="mobile">
     <label for="mobile">Mobile Number: </label>
     <input type="text" id="mobile" name="mobile">
     <br>
+    </div>
 
+    <div class="password">
     <label for="password">Password: </label>
     <input type="password" id="password" name="password">
     <br>
+    </div>
 
     <button type="submit">Register</button>
 
 </form>
+</div>
 </body>
 </html>
