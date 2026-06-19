@@ -5,9 +5,12 @@ public class User
     private String name;
     private String password;
     private String email;
-    private String mobile;
+    private long mobile;
 
-    public User(String name, String password, String email, String mobile) {
+    public User()
+    {}
+
+    public User(String name, String password, String email, long mobile) {
         this.name = name;
         this.password = password;
         this.email = email;
@@ -38,11 +41,11 @@ public class User
         this.email = email;
     }
 
-    public String getMobile() {
+    public long getMobile() {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
+    public void setMobile(long mobile) {
         this.mobile = mobile;
     }
 }

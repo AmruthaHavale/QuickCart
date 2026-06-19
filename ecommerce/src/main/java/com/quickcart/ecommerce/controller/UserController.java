@@ -2,44 +2,45 @@ package com.quickcart.ecommerce.controller;
 
 import com.quickcart.ecommerce.Model.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
-@RequestMapping("/user")
 public class UserController
 {
-    User user = new User("Anjali", "abcd", "anjali@gmail.com", "123456789");
+    private List<User> userList = new ArrayList<>(List.of(
+            new User("Anjali", "abcd","anjali@gmail.com",123456789)
+            ));
 
-    @RequestMapping("/")
-    @ResponseBody
+    @RequestMapping("/user")
     public String userHome()
     {
-        return "<strong><center>Welcome to User page.</center></strong><hr>";
+        return "userHome";
     }
 
-    @RequestMapping("/register")
-    @ResponseBody
-    public String userRegister()
+    @GetMapping("/user/register")
+    public String userRegister(User user)
     {
-        String display = "<strong><center>This is Registration Page for Users.</center></strong><hr>";
+        return "register";
+    }
 
-        display += "User Name: " + user.getName();
-        display += "<br>Password: " + user.getPassword();
-        display += "<br>Email: " + user.getEmail();
-        display += "<br>Mobile Number: " + user.getMobile();
-        return display;
+    @PostMapping("/user/register")
+    public String userregister(User user)
+    {
+        userList.add(user);
+        return "redirect:/login";
     }
 
     @RequestMapping("/login")
     @ResponseBody
     public String userLogin()
     {
-        String display = "<Strong><center>This is Login Page for Users.</center></strong><hr>";
-        display += "User Name: " + user.getName();
-        display += "<br>Password: " + user.getPassword();
-
-        return display;
+        return "ADBS";
     }
 
 }
