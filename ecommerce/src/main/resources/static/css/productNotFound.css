@@ -1,0 +1,15 @@
+body
+{
+    background-color: lightcoral;
+    color: darkred;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.heading{
+    font-size: 50px;
+}
+
+.content{
+    font-size: 50px;
+}

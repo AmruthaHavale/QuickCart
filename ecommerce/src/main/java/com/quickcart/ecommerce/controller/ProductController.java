@@ -40,7 +40,8 @@ public class ProductController
                 return "productByID";
             }
         }
-        return "error404";
+        model.addAttribute("id", id);
+        return "productNotFound";
     }
 
     @RequestMapping("/price/{name}")
