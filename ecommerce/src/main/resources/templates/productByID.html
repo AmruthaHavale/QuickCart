@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product By ID</title>
+    <link rel="stylesheet" href="/css/productByID.css">
+</head>
+<body>
+
+<p class="heading">Product by ID</p><hr>
+<p class="id" th:text="'ID: '+ ${id}"></p>
+
+<p class="content" th:text="'Name:' +${name}"></p>
+<p class="content" th:text="'Price: '+${price}"></p>
+
+</body>
+</html>

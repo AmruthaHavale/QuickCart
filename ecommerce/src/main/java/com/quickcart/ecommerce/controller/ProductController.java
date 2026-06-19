@@ -29,20 +29,18 @@ public class ProductController
     }
 
     @RequestMapping("/list/{id}")
-    @ResponseBody
-    public String productByID(@PathVariable int id)
+    public String productByID(@PathVariable int id, Model model)
     {
-        String display = "<strong>Product By id</strong><hr><br>";
-
         for(Products products: productsList)
         {
             if(products.getId() == id) {
-                display += "Product ID: " + id + "<br>Product Name: " + products.getName() + "<br>Product Price: " + products.getPrice();
-                return display;
+                model.addAttribute("id", id);
+                model.addAttribute("name", products.getName());
+                model.addAttribute("price", products.getPrice());
+                return "productByID";
             }
         }
-        display += "Product with ID " + id + " Not Found in Product List";
-        return display;
+        return "error404";
     }
 
     @RequestMapping("/price/{name}")

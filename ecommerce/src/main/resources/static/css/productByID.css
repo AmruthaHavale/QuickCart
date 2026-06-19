@@ -1,0 +1,20 @@
+body{
+    background-color: palegreen;
+    color: darkslategrey;
+    text-align: center;
+}
+hr{
+    background-color: black;
+    color: black;
+}
+.heading{
+    font-size: 50px;
+}
+
+.id{
+    font-size: 40px;
+}
+
+.content{
+    font-size: 30px;
+}
