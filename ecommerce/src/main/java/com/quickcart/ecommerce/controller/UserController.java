@@ -1,6 +1,6 @@
 package com.quickcart.ecommerce.controller;
 
-import com.quickcart.ecommerce.model.User;
+import com.quickcart.ecommerce.Model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

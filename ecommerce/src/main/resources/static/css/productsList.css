@@ -1,0 +1,38 @@
+body
+{
+    background-color: palegreen;
+    color: darkslategrey;
+    text-align: center;
+}
+
+table
+{
+    border: 2px solid black;
+    margin:auto;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #b0e0e6 ;
+    border: 2px solid black;
+    color: #003333  ;
+    align-items: center;
+    width: 200px;
+    height: 35px;
+}
+
+td
+{
+    background-color: #e6f2f2 ;
+    border: 2px solid black;
+    color: #003333  ;
+    align-items: center;
+    width: 200px;
+    height: 35px;
+}
+
+.Heading
+{
+    font-size: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}

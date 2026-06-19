@@ -10,7 +10,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home() {
-        // This will render src/main/resources/templates/home.html
         return "home";
     }
 }

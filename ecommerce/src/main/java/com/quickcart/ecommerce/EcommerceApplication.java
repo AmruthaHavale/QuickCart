@@ -1,6 +1,5 @@
 package com.quickcart.ecommerce;
 
-import com.quickcart.ecommerce.model.Products;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

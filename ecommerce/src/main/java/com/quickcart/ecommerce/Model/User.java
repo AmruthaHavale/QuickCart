@@ -1,4 +1,4 @@
-package com.quickcart.ecommerce.model;
+package com.quickcart.ecommerce.Model;
 
 public class User
 {
