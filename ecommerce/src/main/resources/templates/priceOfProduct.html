@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Price Of The Product</title>
+    <link rel="stylesheet" href="/css/priceOfProduct.css">
+</head>
+<body>
+<p class="heading">Price Of the product</p><hr>
+<p class="content" th:text="'Name: ' + ${name}"></p>
+<p class="content" th:text="'Price: ' + ${price}"></p>
+</body>
+</html>

@@ -40,25 +40,23 @@ public class ProductController
                 return "productByID";
             }
         }
-        model.addAttribute("id", id);
+        model.addAttribute("product", id);
         return "productNotFound";
     }
 
     @RequestMapping("/price/{name}")
-    @ResponseBody
-    public String priceOfProduct(@PathVariable String name)
+    public String priceOfProduct(@PathVariable String name, Model model)
     {
-        String display = "<Strong>The Price of a Particular Product</strong><hr><br>";
-
         for(Products products : productsList)
         {
             if(products.getName().equalsIgnoreCase(name))
             {
-                display += "The price of <strong>" + name + "</strong> is <strong>" + products.getPrice() + "</strong>";
-                return display;
+                model.addAttribute("name", name);
+                model.addAttribute("price", products.getPrice());
+                return "priceOfProduct";
             }
         }
-        display += "Product Named <strong>" + name + "</strong> not found.";
-        return display;
+        model.addAttribute("product", name);
+        return "productNotFound";
     }
 }
