@@ -54,7 +54,7 @@ public class UserController
         if (result.hasErrors()) {
             return "login";
         }
-        return "redirect:/home";
+        return "redirect:/products/list";
     }
 
 
