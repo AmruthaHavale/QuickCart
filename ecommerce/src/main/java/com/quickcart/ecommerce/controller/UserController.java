@@ -20,12 +20,6 @@ public class UserController
             new User("Anjali", "abcd","anjali@gmail.com","1234567890")
             ));
 
-    @RequestMapping("/user")
-    public String userHome()
-    {
-        return "userHome";
-    }
-
     @GetMapping("/user/register")
     public String userRegister(User user)
     {

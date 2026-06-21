@@ -6,18 +6,34 @@
     <link rel="stylesheet" href="/css/productsList.css">
 </head>
 <body>
-<p class="Heading">Products List:</p>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-    </tr>
-    <tr th:each="product : ${products}">
-        <td th:text="${product.id}"></td>
-        <td th:text="${product.name}"></td>
-        <td th:text="${product.price}"></td>
-    </tr>
-</table>
+<div class="items">
+    <p class="Heading">Welcome to Quick Cart</p>
+    <p class="Heading">Products List:</p>
+    <ul th:each="product : ${products}" class="items">
+        <li>
+            <span title="Add to cart">
+                <button class="ItemButton"
+                        type="button"
+                        th:text="${product.name}"
+                        th:attr="data-name=${product.name}, data-price=${product.price}"></button>
+            </span>
+            <span th:text="' - '+${product.price}"></span>
+        </li>
+    </ul>
+</div>
+
+<div id="cart" class="cart">
+    <p class="Heading">Cart</p>
+    <table id="cartList">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Remove</th>
+        </tr>
+    </table>
+</div>
+
+<script src="/js/productsList.js"></script>
+
 </body>
 </html>
