@@ -61,3 +61,31 @@ td{
     padding: 10px;
     border: 2px solid #003333;
 }
+
+button.enter{
+    background: #003333;
+    border-radius: 3px;
+    color: #e6f2f2;
+    margin-left: 80%;
+    width: 100px;
+    padding: 10px;
+    font-size: 19px;
+    cursor:pointer;
+}
+
+button.enter:hover{
+    background-color: olive;
+}
+
+p.totalDisplay{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 80%;
+    color: #e6f2f2;
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #003333;
+    border-radius: 3px;
+    border: 2px solid #003333;
+}

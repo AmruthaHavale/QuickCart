@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// productsList.js
+
 function addToCart(productName, productPrice) {
     const cartList = document.getElementById("cartList");
 
@@ -26,7 +28,7 @@ function addToCart(productName, productPrice) {
     removeBtn.textContent = "Remove";
     removeBtn.style.border = "none";
     removeBtn.style.backgroundColor = "transparent";
-    removeBtn.style.color = "darkred";
+    removeBtn.style.color = "red";
     removeBtn.onclick = () => row.remove();
     removeCell.appendChild(removeBtn);
 
@@ -36,3 +38,26 @@ function addToCart(productName, productPrice) {
 
     cartList.appendChild(row);
 }
+
+// Calculate total prices
+function calculateTotal() {
+    const cartList = document.getElementById("cartList");
+    const rows = cartList.getElementsByTagName("tr");
+    let total = 0;
+
+    // Skip the header row (index 0)
+    for (let i = 1; i < rows.length; i++) {
+        const priceCell = rows[i].getElementsByTagName("td")[1];
+        if (priceCell) {
+            total += parseFloat(priceCell.textContent);
+        }
+    }
+
+    document.getElementById("totalDisplay").textContent = "Total: ₹" + total;
+}
+
+// Attach event listener to the button
+document.addEventListener("DOMContentLoaded", () => {
+    const totalBtn = document.getElementById("showTotalBtn");
+    totalBtn.addEventListener("click", calculateTotal);
+});
