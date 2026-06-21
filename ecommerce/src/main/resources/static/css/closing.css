@@ -1,0 +1,17 @@
+body{
+    background-color: palegreen;
+    color: #003333;
+    text-align: center;
+    padding-top: 100px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p.heading{
+    font-size: 50px;
+    margin: 10px;
+}
+
+p.subheading{
+    font-size: 40px;
+    margin: 10px;
+}
