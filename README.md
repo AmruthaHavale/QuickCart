@@ -7,7 +7,6 @@ QuickCart is a Java web development learning project that aims to simulate an e-
 The goal of QuickCart is to gain hands-on experience in web application development by building an online shopping application from scratch. New features and functionalities will be added as the project evolves.
  
 ## 🚀 Current Progress
- 
 ### Implemented
 - Spring Boot project setup
 - Basic project structure
