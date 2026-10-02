@@ -1,7 +1,11 @@
 # QuickCart 🛒
  
-QuickCart is a Java web development learning project that aims to simulate an e-commerce platform. The project is being developed incrementally to understand and practice modern Java and Spring Boot concepts.
+QuickCart is a Java and Spring Boot-based e-commerce application being developed as a learning project to explore modern web development concepts and software design practices.
+
+## Project Status
  
+🚧 Under Active Development
+
 ## 📖 Project Overview
  
 The goal of QuickCart is to gain hands-on experience in web application development by building an online shopping application from scratch. New features and functionalities will be added as the project evolves.
@@ -10,7 +14,7 @@ The goal of QuickCart is to gain hands-on experience in web application developm
 ### Implemented
 - Spring Boot project setup
 - Basic project structure
-- MVC architecture exploration
+- Implemented a basic MVC (Model-View-Controller) project structure
 - Initial web application development
  
 ### Planned Features
@@ -73,7 +77,7 @@ Planned improvements include:
  
 ## 👩‍💻 Author
  
-**Amrutha Havale**
+- **Amrutha Havale**
  
-GitHub: https://github.com/AmruthaHavale
-LinkedIn: https://www.linkedin.com/in/amruthakhavale/
+- GitHub: https://github.com/AmruthaHavale
+- LinkedIn: https://www.linkedin.com/in/amruthakhavale/
